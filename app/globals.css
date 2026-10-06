@@ -1,0 +1,83 @@
+@import "tailwindcss";
+@import "@sun-typeface/suit/fonts/variable/woff2/SUIT-Variable.css";
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+    margin: 0;
+    padding: 0;
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: "SUIT Variable", sans-serif;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: #555;
+  cursor: pointer;
+}
+
+img {
+  border: 0;
+  vertical-align: top;
+}
+
+input {
+  border: 0;
+  outline: 0;
+}
+
+.cf {}
+
+.cf:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+address {
+  font-style: normal;
+}
+
+textarea {
+  width: 90%;
+  height: 300px;
+  font-size: 16px;
+  line-height: 24px;
+  border: 1px solid #222;
+  background: #fff;
+  margin: 15px;
+  padding: 15px;
+  font-family: 'Noto Sans KR', sans-serif;
+  font-weight: 400;
+}
+
+#wrap {
+  background-color: #fff;
+  overflow-x: hidden;
+}
