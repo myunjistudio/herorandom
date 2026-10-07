@@ -24,9 +24,9 @@ export default function Home() {
   const [activeProfile2, setActiveProfile2] = useState(0);
   const [activeProfile3, setActiveProfile3] = useState(0);
 
-  const [imageLoaded, setImageLoaded] = useState(false);
-  const [imageLoaded2, setImageLoaded2] = useState(false);
-  const [imageLoaded3, setImageLoaded3] = useState(false);
+  const [imageLoaded, setImageLoaded] = useState(true);
+  const [imageLoaded2, setImageLoaded2] = useState(true);
+  const [imageLoaded3, setImageLoaded3] = useState(true);
 
   useEffect(() => {
     setImageLoaded(false);
@@ -532,7 +532,10 @@ export default function Home() {
                     <li
                       key={index}
                       className={activeProfile === index ? styles.on : ""}
-                      onClick={() => setActiveProfile(index)}
+                      onClick={() => {
+                        setImageLoaded(false);
+                        setActiveProfile(index);
+                      }}
                     >
                       <img
                         src={`/img/a_profile${String(index + 1).padStart(2, "0")}.jpg`}
@@ -620,7 +623,10 @@ export default function Home() {
                     <li
                       key={index}
                       className={activeProfile2 === index ? styles.on : ""}
-                      onClick={() => setActiveProfile2(index)}
+                      onClick={() => {
+                        setImageLoaded2(false);
+                        setActiveProfile2(index);
+                      }}
                     >
                       <img
                         src={`/img/b_profile${String(index + 1).padStart(2, "0")}.jpg`}
@@ -708,7 +714,10 @@ export default function Home() {
                     <li
                       key={index}
                       className={activeProfile3 === index ? styles.on : ""}
-                      onClick={() => setActiveProfile3(index)}
+                      onClick={() => {
+                        setImageLoaded3(false);
+                        setActiveProfile3(index);
+                      }}
                     >
                       <img
                         src={`/img/c_profile${String(index + 1).padStart(2, "0")}.jpg`}
