@@ -1,6 +1,10 @@
 "use client";
 import { useEffect, useState } from "react";
 import Image from "next/image";
+
+import Header from "@/components/Header";
+import Footer from "@/components/Footer";
+
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, Navigation, Pagination } from "swiper/modules";
 import AOS from "aos";
@@ -322,98 +326,25 @@ export default function Home() {
 
   useEffect(() => {
     AOS.init({
-      duration: 500,
+      duration: 300,
+      once: false,
+      offset: 50,
     });
+
+    setTimeout(() => {
+      AOS.refreshHard();
+    }, 500);
   }, []);
 
   return (
-    <div id="wrap" className={`${styles.wrap} ${isOpen ? styles.on : ""}`}>
+    <div id="wrap">
       <a
         href="#wrap"
         className={`${styles.scrollTop} ${isScroll ? styles.scroll : ""}`}
       >
         Scoll <br /> Top
       </a>
-      <div className={`${styles.sideMenu} ${isOpen ? styles.on : ""}`}>
-        <div className={styles.side_inner}>
-          <img src="/img/logo.png" alt="" className={styles.side_logo} />
-          <ul className={styles.menu_list}>
-            <li>
-              <a
-                href="https://cafe.naver.com/herorandomdefence"
-                target="_blank"
-              >
-                공식카페 <span>Cafe</span>
-              </a>
-            </li>
-            <li>
-              <a href="./">
-                쿠폰받기 <span>Coupon</span>
-              </a>
-            </li>
-            <li>
-              <a href="./">
-                체험하기 <span>Demo</span>
-              </a>
-            </li>
-          </ul>
-          <p className={styles.side_copy}>
-            ⓒ2026 Secretcode Corp. All Rights Reserved.
-          </p>
-        </div>
-      </div>
-      <button
-        type="button"
-        className={`${styles.mBtn} ${isOpen ? styles.on : ""}`}
-        onClick={() => setIsOpen(!isOpen)}
-        aria-label="메뉴"
-      >
-        <span></span>
-        <span></span>
-        <span></span>
-      </button>
-      <header
-        id="header"
-        className={`${styles.header} ${isScroll ? styles.scroll : ""}`}
-      >
-        <div className={styles.inner}>
-          <a href="./" className={styles.sc_logo}>
-            <img src="/img/secretcdoe_logo.svg" alt="" />
-          </a>
-          <a href="./" className={styles.logo}>
-            {" "}
-            <img src="/img/logo.png" alt="" />
-          </a>
-        </div>
-        <div className={styles.gnb_box}>
-          <div className={styles.inner}>
-            <nav className={styles.gnb}>
-              <ul>
-                <li>
-                  <a href="#cont1">게임소개</a>
-                </li>
-                <li>
-                  <a href="#cont3">캐릭터</a>
-                </li>
-                <li>
-                  <a
-                    href="https://cafe.naver.com/herorandomdefence"
-                    target="_blank"
-                  >
-                    공식카페
-                  </a>
-                </li>
-                <li>
-                  <a href="./">쿠폰받기</a>
-                </li>
-                <li>
-                  <a href="./">체험하기</a>
-                </li>
-              </ul>
-            </nav>
-          </div>
-        </div>
-      </header>
+      <Header />
       <section className={styles.mainVisual}>
         <div className={styles.inner}>
           <img
@@ -850,26 +781,7 @@ export default function Home() {
           </a>
         </div>
       </section>
-      <footer className={styles.footer}>
-        <ul className={styles.fmenu}>
-          <li>
-            <a href="#">이용약관</a>
-          </li>
-          <li>
-            <a href="#">개인정보처리방침</a>
-          </li>
-          <li>
-            <a href="#">고객센터</a>
-          </li>
-        </ul>
-        <img src="/img/flogo.svg" alt="" className={styles.flogo} />
-        <p className={styles.finfo}>
-          울산광역시 중구 동천 1길 40 (세영이노세븐 지삭산업센터) A동 808호{" "}
-          <br />
-          TEL 052 298 0100 EMAIL support@secretcode.kr <br />
-          ⓒ2026 Secretcode Corp. All Rights Reserved.
-        </p>
-      </footer>
+      <Footer />
     </div>
   );
 }
