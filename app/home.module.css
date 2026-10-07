@@ -1175,6 +1175,7 @@
         display: block;
     }
 
+
     .mBtn {
         display: block;
     }
@@ -1186,6 +1187,11 @@
     .gnb_box {
         display: none;
     }
+
+    .header .sc_logo {
+        display: block;
+    }
+
 
     .logo {
         display: none;
