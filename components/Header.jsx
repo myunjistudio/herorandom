@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { useEffect, useState } from "react";
 import styles from "./Header.module.css";
 
@@ -53,7 +54,7 @@ export default function Header() {
                 </a>
               </li>
               <li>
-                <a href="./">쿠폰받기</a>
+                <a href="/coupon/">쿠폰받기</a>
               </li>
               <li>
                 <a href="./">체험하기</a>
