@@ -509,14 +509,6 @@
     margin-bottom: 25px;
     text-align: center;
     width: 100%;
-    opacity: 0;
-    visibility: hidden;
-    transition: opacity 0.3s ease;
-}
-
-.cont3 .chr_profile .txt_box.txt_show {
-    opacity: 1;
-    visibility: visible;
 }
 
 .cont3 .chr_profile .txt_box .tit,
