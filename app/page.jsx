@@ -23,6 +23,23 @@ export default function Home() {
   const [activeProfile, setActiveProfile] = useState(0);
   const [activeProfile2, setActiveProfile2] = useState(0);
   const [activeProfile3, setActiveProfile3] = useState(0);
+
+  const [imageLoaded, setImageLoaded] = useState(false);
+  const [imageLoaded2, setImageLoaded2] = useState(false);
+  const [imageLoaded3, setImageLoaded3] = useState(false);
+
+  useEffect(() => {
+    setImageLoaded(false);
+  }, [activeProfile]);
+
+  useEffect(() => {
+    setImageLoaded2(false);
+  }, [activeProfile2]);
+
+  useEffect(() => {
+    setImageLoaded3(false);
+  }, [activeProfile3]);
+
   const gradeText = {
     1: "노말 Normal",
     2: "매직 Magic",
@@ -497,6 +514,8 @@ export default function Home() {
           </div>
           <div className={styles.book} data-aos="fade-up">
             <img src="/img/book.png" alt="" className={styles.book_img} />
+
+            {/* 아발론 */}
             <div
               className={`${styles.country_a} ${styles.book_box} ${
                 activeTab === 0 ? styles.show : ""
@@ -507,6 +526,7 @@ export default function Home() {
                   <img src="/img/a_symbol.png" alt="" />
                   아발론 영웅들
                 </h4>
+
                 <ul className={styles.profile_box}>
                   {characterData.map((character, index) => (
                     <li
@@ -522,6 +542,7 @@ export default function Home() {
                   ))}
                 </ul>
               </div>
+
               <div className={styles.book_right_box}>
                 <div className={styles.chr_profile}>
                   <img
@@ -529,6 +550,7 @@ export default function Home() {
                     alt=""
                     className={styles.line}
                   />
+
                   <div className={styles.center_box}>
                     <div className={styles.character_box}>
                       <img
@@ -536,15 +558,22 @@ export default function Home() {
                         alt=""
                         className={styles.chr_bg}
                       />
+
                       <img
                         src={`/img/a_character${String(
                           activeProfile + 1,
                         ).padStart(2, "0")}.png`}
                         alt=""
                         className={styles.chr}
+                        onLoad={() => setImageLoaded(true)}
                       />
                     </div>
-                    <div className={styles.txt_box}>
+
+                    <div
+                      className={`${styles.txt_box} ${
+                        imageLoaded ? styles.txt_show : ""
+                      }`}
+                    >
                       <h6 className={styles.tit}>
                         {characterData[activeProfile].name}
                       </h6>
@@ -564,6 +593,7 @@ export default function Home() {
                       </div>
                     </div>
                   </div>
+
                   <img
                     src="/img/chr_profile_line.png"
                     alt=""
@@ -573,6 +603,7 @@ export default function Home() {
               </div>
             </div>
 
+            {/* 발헤임 */}
             <div
               className={`${styles.country_b} ${styles.book_box} ${
                 activeTab === 1 ? styles.show : ""
@@ -583,6 +614,7 @@ export default function Home() {
                   <img src="/img/b_symbol.png" alt="" />
                   발헤임 영웅들
                 </h4>
+
                 <ul className={styles.profile_box}>
                   {characterData2.map((character, index) => (
                     <li
@@ -598,6 +630,7 @@ export default function Home() {
                   ))}
                 </ul>
               </div>
+
               <div className={styles.book_right_box}>
                 <div className={styles.chr_profile}>
                   <img
@@ -605,6 +638,7 @@ export default function Home() {
                     alt=""
                     className={styles.line}
                   />
+
                   <div className={styles.center_box}>
                     <div className={styles.character_box}>
                       <img
@@ -612,15 +646,22 @@ export default function Home() {
                         alt=""
                         className={styles.chr_bg}
                       />
+
                       <img
                         src={`/img/b_character${String(
                           activeProfile2 + 1,
                         ).padStart(2, "0")}.png`}
                         alt=""
                         className={styles.chr}
+                        onLoad={() => setImageLoaded2(true)}
                       />
                     </div>
-                    <div className={styles.txt_box}>
+
+                    <div
+                      className={`${styles.txt_box} ${
+                        imageLoaded2 ? styles.txt_show : ""
+                      }`}
+                    >
                       <h6 className={styles.tit}>
                         {characterData2[activeProfile2].name}
                       </h6>
@@ -640,6 +681,7 @@ export default function Home() {
                       </div>
                     </div>
                   </div>
+
                   <img
                     src="/img/chr_profile_line.png"
                     alt=""
@@ -649,6 +691,7 @@ export default function Home() {
               </div>
             </div>
 
+            {/* 칼리온 */}
             <div
               className={`${styles.country_c} ${styles.book_box} ${
                 activeTab === 2 ? styles.show : ""
@@ -659,6 +702,7 @@ export default function Home() {
                   <img src="/img/c_symbol.png" alt="" />
                   칼리온 영웅들
                 </h4>
+
                 <ul className={styles.profile_box}>
                   {characterData3.map((character, index) => (
                     <li
@@ -674,6 +718,7 @@ export default function Home() {
                   ))}
                 </ul>
               </div>
+
               <div className={styles.book_right_box}>
                 <div className={styles.chr_profile}>
                   <img
@@ -681,6 +726,7 @@ export default function Home() {
                     alt=""
                     className={styles.line}
                   />
+
                   <div className={styles.center_box}>
                     <div className={styles.character_box}>
                       <img
@@ -688,15 +734,22 @@ export default function Home() {
                         alt=""
                         className={styles.chr_bg}
                       />
+
                       <img
                         src={`/img/c_character${String(
                           activeProfile3 + 1,
                         ).padStart(2, "0")}.png`}
                         alt=""
                         className={styles.chr}
+                        onLoad={() => setImageLoaded3(true)}
                       />
                     </div>
-                    <div className={styles.txt_box}>
+
+                    <div
+                      className={`${styles.txt_box} ${
+                        imageLoaded3 ? styles.txt_show : ""
+                      }`}
+                    >
                       <h6 className={styles.tit}>
                         {characterData3[activeProfile3].name}
                       </h6>
@@ -716,6 +769,7 @@ export default function Home() {
                       </div>
                     </div>
                   </div>
+
                   <img
                     src="/img/chr_profile_line.png"
                     alt=""

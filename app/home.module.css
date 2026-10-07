@@ -509,6 +509,14 @@
     margin-bottom: 25px;
     text-align: center;
     width: 100%;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease;
+}
+
+.cont3 .chr_profile .txt_box.txt_show {
+    opacity: 1;
+    visibility: visible;
 }
 
 .cont3 .chr_profile .txt_box .tit,
@@ -625,6 +633,10 @@
         height: 65px;
         font-size: 12px;
         line-height: 1.25em;
+    }
+
+    .mainVisual {
+        min-height: 950px;
     }
 
     .mainVisual .main_logo {
@@ -769,6 +781,42 @@
 
 }
 
+@media (max-width: 1512px) {
+    .mainVisual {
+        min-height: auto;
+    }
+
+    .mainVisual .main_logo {
+        margin-top: -280px;
+    }
+
+    @keyframes intro1 {
+        0% {}
+
+        100% {
+            width: 380px;
+            opacity: 1;
+        }
+    }
+
+    .mainVisual .btn_box {
+        width: 380px;
+    }
+
+    @keyframes intro2 {
+        0% {}
+
+        100% {
+            margin-top: 65px;
+            opacity: 1;
+        }
+    }
+
+    .mainVisual .main_chr {
+        width: 600px;
+    }
+}
+
 @media (max-width: 1200px) {
     .inner {
         width: 90%;
@@ -905,6 +953,8 @@
     }
 
 }
+
+
 
 @media (max-width: 768px) {
 
@@ -1120,6 +1170,7 @@
     .cont3 .book_left_box {
         margin: 0 auto 15px;
     }
+
 
     .cont3 .book_left_box .profile_box li {
         width: 40px;
