@@ -49,18 +49,21 @@
     top: -100%;
     right: 0;
     transition: all .3s;
+    opacity: 0;
 }
 
 .sideMenu .side_inner {
     width: 90%;
     height: 100%;
     margin: 0 auto;
-    padding: 150px 0 0;
+    padding: 125px 0 0;
     position: relative;
 }
 
 .sideMenu.on {
+    display: block;
     top: 0;
+    opacity: 1;
 }
 
 .sideMenu .side_logo {
@@ -170,7 +173,7 @@
     position: fixed;
     width: 100%;
     background-color: #fff;
-    z-index: 9999;
+    z-index: 999999;
     transition: all .3s;
     margin-top: -50%;
     opacity: 0;
@@ -1239,6 +1242,7 @@
 
     .cont1 .des {
         font-size: 15px;
+        letter-spacing: -0.5px;
     }
 
     .cont1 .des br {
@@ -1255,6 +1259,10 @@
 
     .cont2 {
         background: url(/img/cont2_bg.png) no-repeat center / 220%;
+    }
+
+    .cont2 .des {
+        letter-spacing: -0.5px;
     }
 
     .cont2 .cont2_main {
