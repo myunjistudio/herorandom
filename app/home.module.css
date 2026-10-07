@@ -55,7 +55,7 @@
     width: 90%;
     height: 100%;
     margin: 0 auto;
-    padding: 100px 0 0;
+    padding: 150px 0 0;
     position: relative;
 }
 
@@ -65,7 +65,7 @@
 
 .sideMenu .side_logo {
     width: 150px;
-    margin-bottom: 65px;
+    margin-bottom: 50px;
 }
 
 .sideMenu .menu_list {}
@@ -80,19 +80,19 @@
     margin-bottom: 20px;
     color: #111;
     font-weight: 700;
-    font-size: 21px;
+    font-size: 18px;
 }
 
 .sideMenu .menu_list li a span {
     font-weight: 300;
     color: #666;
-    font-size: 16px;
-    margin-left: 10px;
+    font-size: 14px;
+    margin-left: 5px;
 }
 
 .sideMenu .side_copy {
     color: #998;
-    font-size: 14px;
+    font-size: 12px;
     position: absolute;
     bottom: 40px;
 }
@@ -1286,6 +1286,11 @@
 }
 
 @media (max-width: 565px) {
+    .scrollTop {
+        right: 15px;
+        bottom: 15px;
+    }
+
     .header .inner {
         padding: 0;
     }

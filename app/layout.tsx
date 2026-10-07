@@ -12,10 +12,17 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
-export const metadata: Metadata = {
+export const metadata = {
   title: "영웅랜덤디펜스",
   description: "영웅들과 함께하는 타워 디펜스",
+  openGraph: {
+    title: "영웅랜덤디펜스",
+    description: "영웅들과 함께하는 타워 디펜스",
+    images: ["/img/link.jpg"],
+  },
 };
+
+
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
