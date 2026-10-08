@@ -40,10 +40,10 @@ export default function Header() {
           <nav className={styles.gnb}>
             <ul>
               <li>
-                <a href="#cont1">게임소개</a>
+                <a href="./#cont1">게임소개</a>
               </li>
               <li>
-                <a href="#cont3">캐릭터</a>
+                <a href="./#cont3">캐릭터</a>
               </li>
               <li>
                 <a
