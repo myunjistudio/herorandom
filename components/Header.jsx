@@ -77,7 +77,7 @@ export default function Header() {
               </a>
             </li>
             <li>
-              <a href="./">
+              <a href="/coupon/">
                 쿠폰받기 <span>Coupon</span>
               </a>
             </li>

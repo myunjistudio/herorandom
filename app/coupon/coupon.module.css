@@ -1,3 +1,344 @@
+@import url("https://cdn.jsdelivr.net/gh/fonts-archive/Paperlogy/Paperlogy.css");
+
+.scrollTop {
+    position: fixed;
+    z-index: 9999;
+    bottom: 25px;
+    right: 25px;
+    background-color: rgba(2, 2, 2, 0.8);
+    color: #FFD200;
+    width: 85px;
+    height: 85px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-size: 14px;
+    line-height: 1.35em;
+    font-weight: 700;
+    font-family: "Paperlogy", sans-serif;
+    transition: all .5s;
+    opacity: 0;
+}
+
+.scrollTop.scroll {
+    opacity: 1;
+}
+
+.scrollTop:hover {
+    color: #111;
+    background-color: #FFD200;
+    font-weight: 900;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.15);
+}
+
 .container {
     min-height: 100vh;
+    background-color: #F6F6F6;
+    box-sizing: border-box;
+    padding-top: 200px;
+    color: #333;
+}
+
+.inner {
+    width: 1200px;
+    margin: 0 auto;
+}
+
+.app_ico {
+    width: 100px;
+    margin-bottom: 15px;
+}
+
+
+.tit {
+    font-family: "Paperlogy", sans-serif;
+    color: #222;
+    font-weight: 700;
+    font-size: 38px;
+    margin-bottom: 5px;
+}
+
+.des {
+    color: #666;
+    font-size: 18px;
+}
+
+.tit_box {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    margin-bottom: 40px;
+}
+
+.tit_box .right_box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.search_input {
+    background-color: #fff;
+    padding: 10px 15px;
+    width: 285px;
+    border-radius: 5px;
+    border: 1px solid #eee;
+    margin-right: 10px;
+}
+
+.search_input::placeholder {
+    transition: all 0.3s;
+}
+
+.search_input:focus::placeholder {
+    opacity: 0;
+}
+
+.search_btn {
+    width: 45px;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #666;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.search_btn img {
+    width: 55%;
+}
+
+.coupon_list {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.coupon_list li {
+    width: 48%;
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    border-radius: 10px;
+    box-sizing: border-box;
+    padding: 30px 25px;
+    margin-bottom: 35px;
+    position: relative;
+    cursor: pointer;
+    position: relative;
+}
+
+.coupon_list li.end:after {
+    display: block;
+    content: '';
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background: rgba(0, 0, 0, 0.25);
+    top: 0;
+    left: 0;
+    border-radius: 10px;
+}
+
+.coupon_list li:nth-child(odd) {
+    margin-right: 2%;
+}
+
+.coupon_list li:nth-child(even) {
+    margin-left: 2%;
+}
+
+.coupon_list li .img_box {
+    width: 100px;
+    height: 100px;
+    background-color: #EEEEEE;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 25px;
+    flex-shrink: 0;
+}
+
+.coupon_list li .txt_box {
+    width: calc(100% - 165px);
+}
+
+.coupon_list li .coupon_tit {
+    font-size: 24px;
+    font-weight: 600;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    font-family: "Paperlogy", sans-serif;
+}
+
+.coupon_list li .coupon_des {
+    color: #666;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    margin-bottom: 5px;
+}
+
+.coupon_list li .coupon_date {
+    color: #4F98FF;
+    font-weight: 700;
+}
+
+.coupon_list li .copy_ico {
+    width: 25px;
+    position: absolute;
+    right: 25px;
+    top: 25px;
+}
+
+@media (max-width: 1920px) {
+    .scrollTop {
+        width: 65px;
+        height: 65px;
+        font-size: 12px;
+        line-height: 1.25em;
+    }
+}
+
+@media (max-width: 1200px) {
+    .inner {
+        width: 90%;
+        max-width: auto;
+        min-width: auto;
+    }
+
+    .app_ico {
+        width: 80px;
+        margin-bottom: 15px;
+    }
+
+    .tit {
+        font-size: 34px;
+        margin-bottom: 0px;
+    }
+
+    .des {
+        font-size: 16px;
+    }
+
+    .search_input {
+        font-size: 15px;
+    }
+
+
+    .coupon_list {
+        display: block;
+    }
+
+    .coupon_list li {
+        width: 100%;
+        margin-bottom: 25px;
+    }
+
+    .coupon_list li:nth-child(odd) {
+        margin-right: 0%;
+    }
+
+    .coupon_list li:nth-child(even) {
+        margin-left: 0%;
+    }
+
+    .coupon_list li .txt_box {
+        width: calc(100% - 140px);
+    }
+
+    .coupon_list li .img_box {
+        width: 85px;
+        height: 85px;
+        margin-right: 20px;
+    }
+
+    .coupon_list li .coupon_tit {
+        font-size: 21px;
+    }
+
+    .coupon_list li .coupon_des {
+        font-size: 15px;
+    }
+
+    .coupon_list li .coupon_date {
+        font-size: 14px;
+    }
+
+}
+
+@media (max-width: 768px) {
+    .container {
+        padding-top: 125px;
+    }
+
+    .tit_box {
+        display: block;
+    }
+
+    .tit_box .left_box {
+        margin-bottom: 25px;
+    }
+
+    .tit_box .right_box {
+        width: 100%;
+        justify-content: flex-start;
+    }
+
+    .search_input {
+        width: calc(100% - 55px);
+    }
+
+    .coupon_list li .coupon_tit {
+        font-size: 18px;
+    }
+
+    .coupon_list li .coupon_des {
+        font-size: 14px;
+    }
+
+    .coupon_list li .coupon_date {
+        font-size: 13px;
+    }
+}
+
+@media (max-width: 565px) {
+    .scrollTop {
+        right: 15px;
+        bottom: 15px;
+    }
+
+    .app_ico {
+        width: 65px;
+        margin-bottom: 5px;
+    }
+
+    .tit {
+        font-size: 32px;
+    }
+
+    .des {
+        font-size: 15px;
+    }
+
+    .coupon_list li .txt_box {
+        width: calc(100% - 115px);
+    }
+
+    .coupon_list li .img_box {
+        width: 55px;
+        height: 55px;
+    }
+}
+
+@media (max-width: 430px) {
+    .inner {
+        min-width: 320px;
+    }
+
 }

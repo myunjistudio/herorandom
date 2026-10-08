@@ -5,13 +5,15 @@ export default function Footer() {
     <footer className={styles.footer}>
       <ul className={styles.fmenu}>
         <li>
-          <a href="#">이용약관</a>
+          <a href="https://secretcode.kr/legal/terms-of-service/">이용약관</a>
         </li>
         <li>
-          <a href="#">개인정보처리방침</a>
+          <a href="https://secretcode.kr/legal/privacy-policy/">
+            개인정보처리방침
+          </a>
         </li>
         <li>
-          <a href="#">고객센터</a>
+          <a href="Tel:070-4155-8471">고객센터</a>
         </li>
       </ul>
       <img src="/img/flogo.svg" alt="" className={styles.flogo} />
